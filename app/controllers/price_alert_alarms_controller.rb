@@ -34,7 +34,7 @@ class PriceAlertAlarmsController < ApplicationController
         call_counter = 2
     if @price_alert_alarm.message_alert == 1 &&  @price_alert_alarm.phone_alert ==1
         call_counter = 3
-    cmd_string = "python /opt/HackNight/hacknight3.0/persecurity_script.py  " + @price_alert_alarm.symbol + " " + @price_alert_alarm.mobile_number + " " + @price_alert_alarm.cap_price + " "+ @price_alert_alarm.floor_price + "  "+ @price_alert_alarm.call_counter +"11 "
+    cmd_string = "python /opt/HackNight/hacknight3.0/persecurity_script.py  " + @price_alert_alarm.symbol + " " + @price_alert_alarm.mobile_number + " " + @price_alert_alarm.cap_price + " "+ @price_alert_alarm.floor_price + "  "+ call_counter +" 11 "
     system cmd_string 
     respond_to do |format|
       if @price_alert_alarm.save
