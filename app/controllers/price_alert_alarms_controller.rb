@@ -27,7 +27,7 @@ class PriceAlertAlarmsController < ApplicationController
   def create
     @price_alert_alarm = PriceAlertAlarm.new(price_alert_alarm_params)
     #python persecscript.py HDFCBANK 8871733514 1300 1200 3 11
-    cmd_string = "python /opt/HackNight/hacknight3.0/persecurity_script.py  " + params[:symbol] + " " + params[:mobile_number] + " " + params[:cap_price] + " "+ params[:floor_price] + "  11 "
+    cmd_string = "python /opt/HackNight/hacknight3.0/persecurity_script.py  " + @price_alert_alarm.symbol + " " + @price_alert_alarm.mobile_number + " " + @price_alert_alarm.cap_price + " "+ @price_alert_alarm.floor_price + "  11 "
     system cmd_string 
     respond_to do |format|
       if @price_alert_alarm.save
