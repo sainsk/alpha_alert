@@ -26,8 +26,9 @@ class PriceAlertAlarmsController < ApplicationController
   # POST /price_alert_alarms.json
   def create
     @price_alert_alarm = PriceAlertAlarm.new(price_alert_alarm_params)
-    string = "python /opt/HackNight/hacknight3.0/per_security.py" + price_alert_params[:symbol]
-
+    #python persecscript.py HDFCBANK 8871733514 1300 1200 3 11
+    cmd_string = "python /opt/HackNight/hacknight3.0/persecurity_script.py  " + params[:symbol] + " " + params[:mobile_number] + " " + params[:cap_price] + " "+ params[:floor_price] + "  11 "
+    system cmd_string 
     respond_to do |format|
       if @price_alert_alarm.save
         format.html { redirect_to @price_alert_alarm, notice: 'Price alert alarm was successfully created.' }
