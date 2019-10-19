@@ -1,0 +1,2 @@
+class PriceAlertAlarm < ApplicationRecord
+end

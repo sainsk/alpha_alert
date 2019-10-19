@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Price Alerts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Symbol</th>
+      <th>Current price</th>
+      <th>Cap price</th>
+      <th>Floor price</th>
+      <th>Expected alert till date</th>
+      <th>Mobile number</th>
+      <th>Phone alert</th>
+      <th>Message alert</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @price_alerts.each do |price_alert| %>
+      <tr>
+        <td><%= price_alert.name %></td>
+        <td><%= price_alert.type %></td>
+        <td><%= price_alert.symbol %></td>
+        <td><%= price_alert.current_price %></td>
+        <td><%= price_alert.cap_price %></td>
+        <td><%= price_alert.floor_price %></td>
+        <td><%= price_alert.expected_alert_till_date %></td>
+        <td><%= price_alert.mobile_number %></td>
+        <td><%= price_alert.phone_alert %></td>
+        <td><%= price_alert.message_alert %></td>
+        <td><%= link_to 'Show', price_alert %></td>
+        <td><%= link_to 'Edit', edit_price_alert_path(price_alert) %></td>
+        <td><%= link_to 'Destroy', price_alert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Price Alert', new_price_alert_path %>

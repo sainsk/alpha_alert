@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @price_alert_alarm.name %>
+</p>
+
+<p>
+  <strong>Alert type:</strong>
+  <%= @price_alert_alarm.alert_type %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @price_alert_alarm.symbol %>
+</p>
+
+<p>
+  <strong>Current price:</strong>
+  <%= @price_alert_alarm.current_price %>
+</p>
+
+<p>
+  <strong>Cap price:</strong>
+  <%= @price_alert_alarm.cap_price %>
+</p>
+
+<p>
+  <strong>Floor price:</strong>
+  <%= @price_alert_alarm.floor_price %>
+</p>
+
+<p>
+  <strong>Expected alert till date:</strong>
+  <%= @price_alert_alarm.expected_alert_till_date %>
+</p>
+
+<p>
+  <strong>Mobile number:</strong>
+  <%= @price_alert_alarm.mobile_number %>
+</p>
+
+<p>
+  <strong>Phone alert:</strong>
+  <%= @price_alert_alarm.phone_alert %>
+</p>
+
+<p>
+  <strong>Message alert:</strong>
+  <%= @price_alert_alarm.message_alert %>
+</p>
+
+<%= link_to 'Edit', edit_price_alert_alarm_path(@price_alert_alarm) %> |
+<%= link_to 'Back', price_alert_alarms_path %>

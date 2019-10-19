@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  alert_type: MyString
+  symbol: MyString
+  current_price: 1.5
+  cap_price: 1.5
+  floor_price: 1.5
+  expected_alert_till_date: 2019-10-19 19:47:24
+  mobile_number: MyString
+  phone_alert: false
+  message_alert: false
+
+two:
+  name: MyString
+  alert_type: MyString
+  symbol: MyString
+  current_price: 1.5
+  cap_price: 1.5
+  floor_price: 1.5
+  expected_alert_till_date: 2019-10-19 19:47:24
+  mobile_number: MyString
+  phone_alert: false
+  message_alert: false

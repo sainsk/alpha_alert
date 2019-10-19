@@ -1,0 +1,67 @@
+<%= form_with(model: price_alert, local: true) do |form| %>
+  <% if price_alert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(price_alert.errors.count, "error") %> prohibited this price_alert from being saved:</h2>
+
+      <ul>
+        <% price_alert.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :symbol %>
+    <%= form.text_field :symbol %>
+  </div>
+
+  <div class="field">
+    <%= form.label :current_price %>
+    <%= form.text_field :current_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cap_price %>
+    <%= form.text_field :cap_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :floor_price %>
+    <%= form.text_field :floor_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expected_alert_till_date %>
+    <%= form.datetime_select :expected_alert_till_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile_number %>
+    <%= form.text_field :mobile_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_alert %>
+    <%= form.check_box :phone_alert %>
+  </div>
+
+  <div class="field">
+    <%= form.label :message_alert %>
+    <%= form.check_box :message_alert %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
