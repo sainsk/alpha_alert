@@ -1,5 +1,7 @@
-<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<p id="notice"><%= notice %></p>
+<td class=".table-striped">
 <p>
   <strong>Name:</strong>
   <%= @price_alert_alarm.name %>
@@ -49,6 +51,6 @@
   <strong>Message alert:</strong>
   <%= @price_alert_alarm.message_alert %>
 </p>
-
+</td>
 <%= link_to 'Edit', edit_price_alert_alarm_path(@price_alert_alarm) %> |
 <%= link_to 'Back', price_alert_alarms_path %>
